@@ -16,49 +16,27 @@
             <h3>Search for a City:</h3>
             <input id="search_input" type="text"> 
             <button id="search_btn">Search</button> 
+            <div id="search-history">
+                <h3>Search History:</h3>
+                <ul id="history_list">
+                    <!-- Search history list will be dynamically generated here -->
+                </ul>
+
+            </div>
         </div>
         <div class="weather-data">
             <div class="current_weather">
                 <div class="information">
                     <h2>Current Weather</h2>
-                    <h2>______ ( ______)</h2>
-                    <h6>Temperature: __°F</h6>
-                    <h6>Wind: __ MPH</h6>
-                    <h6>Humidity: __%</h6>
+                    <h2 id="current_city">______ ( ______)</h2>
+                    <h6 id="current_temp">Temperature: __°F</h6>
+                    <h6 id="current_wind">Wind: __ MPH</h6>
+                    <h6 id="current_humidity">Humidity: __%</h6>
                 </div>
                 <div class="days_forecast">
                     <h2>5-Day Forecast</h2>
-                    <ul class="weather_cards">
-                        <li class="card">
-                            <h3>( ______)</h3>
-                            <h6>Temp: __°F</h6>
-                            <h6>Wind: __MPH</h6>
-                            <h6>Humidity: __%</h6>
-                        </li>
-                        <li class="card">
-                            <h3>( ______)</h3>
-                            <h6>Temp: __°F</h6>
-                            <h6>Wind: __MPH</h6>
-                            <h6>Humidity: __%</h6>
-                        </li>
-                        <li class="card">
-                            <h3>( ______)</h3>
-                            <h6>Temp: __°F</h6>
-                            <h6>Wind: __MPH</h6>
-                            <h6>Humidity: __%</h6>
-                        </li>
-                        <li class="card">
-                            <h3>( ______)</h3>
-                            <h6>Temp: __°F</h6>
-                            <h6>Wind: __MPH</h6>
-                            <h6>Humidity: __%</h6>
-                        </li>
-                        <li class="card">
-                            <h3>( ______)</h3>
-                            <h6>Temp: __°F</h6>
-                            <h6>Wind: __MPH</h6>
-                            <h6>Humidity: __%</h6>
-                        </li>
+                    <ul id="weather_cards">
+                        
                         
                     </ul>
                 </div>
