@@ -9,7 +9,7 @@
     background-image: linear-gradient(to right, blue, purple);
     color: #ffffff;
     text-align: center;
-    padding: 1em 0;
+    padding: 1em0;
 }
 
 .container {
@@ -17,19 +17,44 @@
     flex-direction: column;
     align-items: center;
     padding: 30px;
+    margin-left: auto;
+}
+#history_list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    margin-left: auto;
+    border: solid 1px #333333;
+    background-color: rgb(245, 249, 249);
+}
+
+#search_history {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    margin-left: auto;
+    border: solid 1px #333333;
+    background-color: rgb(245, 249, 249);
 }
 
 .weather-input {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+    margin-right: 800px;
+    width: 300px;
+    border-radius: 4px;
+    font-size: .5rem;
+    color: #333333;
+    background: #ffffff;
+    border: 1px solid #333333;
+    box-shadow: 02px4pxrgba(0, 0, 0, 0.2);
+    padding: 0.5em1em;
+    transition: border-color 0.2s ease;
 }
 
-.weather-input input {
-    padding: 0.5em;
-    margin-right: 1em;
-}
-
-.weather-input button {
-    padding: 0.5em 1em;
+.weather-inputbutton {
+    padding: 0.5em1em;
     cursor: pointer;
     outline: none;
     border: none;
@@ -40,24 +65,39 @@
     transition: background 0.2s ease;
 }
 
-.weather-input button:hover {
+.weather-inputbutton:hover {
     background: #2c52ed;
 }
 
 .weather-data {
+    display: flex;
+    flex-direction: row;
     width: 100%;
+    padding: 1em;
+    border-radius: 5px;
+    margin-top: 1em;
+    box-shadow: 04px8px0rgba(0, 0, 0, 0.2);
 }
 
-.current_weather,
-.days_forecast {
-    background: #e6e7ec;
+.current_weather {
+    flex: 1;
+    padding: 1em;
+    margin-right: 1em;
     border-radius: 5px;
-    padding: 20px;
-    margin-top: 1em;
+    box-shadow: 04px8px0rgba(0, 0, 0, 0.2);
+    border: solid 1px #333333;
+}
+
+.forecast {
+    flex: 1;
+    padding: 1em;
+    border-radius: 5px;
+    box-shadow: 04px8px0rgba(0, 0, 0, 0.2);
+    border: solid 1px #333333;
 }
 
 .current_weather h2,
-.days_forecast h2 {
+.forecast h2 {
     color: #333333;
     text-align: center;
     margin-bottom: 1em;
@@ -66,16 +106,42 @@
 .weather_cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
     gap: 1em;
+}
+.card-container {
+    display: flex;
+    /* Enables flexbox layout */
+    flex-wrap: wrap;
+    /* Allows wrapping to the next line if there’s not enough space */
+    justify-content: space-around;
+    /* Distributes space around the cards */
+    gap: 1em;
+    /* Space between cards (optional) */
+    padding: 1em;
+    /* Optional padding around the container */
 }
 
 .card {
-    flex: 1 1 20%;
-    padding: 1em;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s;
+    flex: 1 1 calc(20% - 2em);
+        /* Flex-grow, flex-shrink, and flex-basis (adjust to fit 5 cards) */
+        margin: 0 10px;
+        padding: 2em;
+        border-radius: 10px;
+        box-shadow: 4px 8px 0 rgba(0, 0, 0, 0.2);
+        /* Fixed box-shadow property */
+        transition: box-shadow 0.3s, transform 0.3s;
+        background: #ffffff;
+        color: #333333;
+        text-align: left;
+        cursor: pointer;
+        transform: scale(1);
+        border: solid 1px #333333;
+        
+        
+}
+
+.card:hover {
+    transform: scale(1.05);
 }
 
 @media (max-width: 768px) {
@@ -90,16 +156,25 @@
         justify-content: center;
     }
 
-    .weather-input input {
+    .weather-inputinput {
         width: 60%;
         margin-bottom: 0.5em;
     }
 
-    .weather-input button {
+    .weather-inputbutton {
         width: 30%;
     }
 
-    .weather_cards .card {
-        flex: 1 1 45%;
+    .weather_data {
+        flex-direction: column;
+    }
+
+    .current_weather,
+    .days_forecast {
+        margin-right: 0;
+    }
+
+    .weather_cards.card {
+        flex: 11100%;
     }
 }

@@ -53,6 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 forecastCard.classList.add("card");
                 forecastCard.innerHTML = `
                 <h3>${day.dt_txt}</h3>
+                <img src="https://openweathermap.org/img/w/${day.weather[0].icon}.png" alt="Weather Icon">
                 <h6>Temp: ${day.main.temp}°F</h6>
                 <h6>Wind: ${day.wind.speed} MPH</h6>
                 <h6>Humidity: ${day.main.humidity}%</h6>
