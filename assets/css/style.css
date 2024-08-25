@@ -43,9 +43,9 @@ h3 {
 .container {
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: 700px;
     max-width: 1200px;
-    margin-left: -275px;
+    margin-left: -350px;
     margin-top: 200px;
     /* Center the container */
 }
@@ -88,12 +88,13 @@ h3 {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     margin-top: 200px;
-    margin-left: -175px;
+    margin-left: 10px;
     /* Align with the weather input */
 }
 
 .current_weather {
     margin-bottom: 20px;
+    width: 80%;
 }
 
 .forecast h2 {
